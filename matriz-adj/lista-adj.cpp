@@ -195,5 +195,5 @@ main(){
                 break;
         }
     }while (opcao != 0);
-    
+    cout<<"fim do programa";
 }
