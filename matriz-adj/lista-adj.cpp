@@ -83,7 +83,7 @@ void Grafo::insereAresta(string saida, string entrada, int peso){
         matrizAdjacencias[linha][col] = peso;
         
         // Remover se trata-se de um grafo direcionado
-        //matrizAdjacencias[col][linha] = peso;
+        matrizAdjacencias[col][linha] = peso;
     }
 }
 
@@ -100,7 +100,7 @@ int Grafo::obterGrau(string item){
     int grau = 0;
     int linha = getIndicePorNomeVertice(item);
 
-    /*if(linha != -1){
+    if(linha != -1){
         for(int i = 0; i < maxVertices; i++){
             if(matrizAdjacencias[linha][i] != arestaNula)
                 grau++;
@@ -108,10 +108,10 @@ int Grafo::obterGrau(string item){
         return grau;
     } else {
         return 0;
-    }*/
+    }
 
     // Grafo direcionado
-    if(linha != -1){
+    /*if(linha != -1){
         for(int i = 0; i < maxVertices; i++){
             if(matrizAdjacencias[linha][i] != arestaNula)
                 grau++;
@@ -121,7 +121,7 @@ int Grafo::obterGrau(string item){
         return grau;
     } else {
         return 0;
-    }
+    }*/
 }
 
 void Grafo::imprimirMatriz(){
@@ -194,6 +194,6 @@ main(){
                 cout << "ERROR" << endl;
                 break;
         }
-    }while (opcao != 0);
-    cout<<"fim do programa";
+    } while (opcao != 0);
+
 }
